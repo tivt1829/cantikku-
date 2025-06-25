@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untuk Liaaa 💌</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background_liaaa.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: 100px auto 30px;
+    }
+    .btn-peluk {
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .btn-peluk:hover {
+      background-color: #ff1493;
+    }
+    .emoji {
+      font-size: 40px;
+      display: none;
+      margin-top: 20px;
+    }
+    .rain {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .raindrop {
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background: #ffffffa1;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { top: -20px; }
+      100% { top: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rain" id="rain"></div>
+
+  <audio autoplay loop>
+    <source src="https://ia801009.us.archive.org/9/items/penjaga-hati_202406/penjaga%20hati.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="overlay">
+    <h1>Sayangku Liaaa 💌</h1>
+    <p>Sayang ku aku minta maap ya kalok aku masih suka bikin salah sama sayang, aku masih sering bikin sayang emsoi.</p>
+    <p>Aku pasti kedepannya bakal perbaiki terus ya sayang, aku pasti bisaa. Aku minta maap ya kalau sampe sekarang aku masih nyakitin sayang terus...</p>
+    <p>Jujur hati ku sakit banget liat postingan ulang sayang. Aku nggak bisa berkata-kata lagi, antara kecewa sama diri sendiri dan sakit hatinya.</p>
+    <p>Aku cuman bisa nangis, karena lagi-lagi aku ngerasa gagal dan bersalah. Tapi aku gak akan nyerah buat mahamin sayang dan selalu jadi yang terbaik dari diri aku sendiri.</p>
+    <p><strong>Yang sayang harus tauuu... aku sayang banget sama sayang 😕❗🤍💐❤️💛🔥💚💚💜💖💜💝🤎💘🤎🤍🎊🤎💜💚💗💜💜💝💜❤️💝💞💟💞💟💕💋🫂</strong></p>
+    <p>Aku cinta kamu, sekali lagi maap ya sayang 💗</p>
+    <p>Tekan tombol di bawah ini kalau kamu udah maafin aku yaa ❤️</p>
+    <button class="btn-peluk" onclick="document.getElementById('pelukk').style.display='block'">🤗 Peluk balik</button>
+    <div id="pelukk" class="emoji">💋💋💋</div>
+  </div>
+
+  <script>
+    function createRainDrop() {
+      const drop = document.createElement("div");
+      drop.className = "raindrop";
+      drop.style.left = Math.random() * 100 + "vw";
+      drop.style.animationDuration = (0.5 + Math.random() * 0.5) + "s";
+      document.getElementById("rain").appendChild(drop);
+    }
+
+    for (let i = 0; i < 150; i++) {
+      createRainDrop();
+    }
+  </script>
+</body>
+</html>
